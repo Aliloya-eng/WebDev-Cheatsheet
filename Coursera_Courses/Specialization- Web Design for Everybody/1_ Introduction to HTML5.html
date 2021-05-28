@@ -1,0 +1,122 @@
+<!--
+	Always validate your code
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+<link rel="icon" type="image/png" href="">
+<!--
+	use the "link" tag IN THE HEAD to link content from other pages or sources to your page.
+	(this example adds an icon to the page tag in the browser window)
+-->
+
+<script src="https://kit.fontawesome.com/f3edcdbac3.js"></script>
+<!--
+	this is to link awsomefont to our page (to use their icons).
+-->
+
+</head>
+<body>
+
+	<!--
+		nice tags:
+		<accesskey>
+		<tabindex>
+
+	-->
+
+	<h3 id="H">pay attention when using different tags (look at the comment in the html file)</h3>
+	<!--
+		even if you can make the same style for the font in a "p" tag, But they have different meaning for the browser,
+    	and page readers wont know that this is a header when you use the tag "p" no matter how big you make the font.
+    -->
+
+	<img src="" title="look at the html file to know how this comment is popping up" alt="empty image just to show how important is the 'alt' tag (look at the comment in the html file)">
+	<!--
+		1- using "alt" is importing for the accessability of the page (for meaning and for page readers).
+			+++ "alt" will appear in searches at search engines. +++
+		2- use "title" tag to make a comment pop up when hovering over an element (not just images).
+		3- pay attention to the size of the image (how many KB?) big images take a long time to load.
+	-->
+
+	<br><!--this is a line break because images are inline elements-->
+	<i class="fas fa-angry">this is an icon tag</i>
+	<i class="fas fa-angry fa-xs">fa-xs for extra small</i>
+	<i class="fas fa-angry fa-lg">fa-lg for large</i>
+	<i class="fas fa-angry fa-3x">fa-3x for xxx large</i>
+	<!--
+		to diplay an icon from the site fontawsome we first link a file or import a script from the site in the head of our page, then we set the {class} attribute of our "i" tag to the name that is given to the icon on fontawsome.
+			+++ for size (xs,md,lg,2x,3x,5x,10x).
+			+++ ofcourse we can use them as links too (inside "href" tag) but it is not a good idea for page readers and evenmore it is not considered VALID to use links without displaying text. in this case we can use {aria-label} attribute to tell page readers where this icon links to.
+	-->
+
+<br>
+	<a href="#H" target="">HI</a>
+	<!--
+		1- in an "a" tag we can use {id} as an {href} (so the browser will go to the element with the {id} we used)
+		   +++ GOOD FOR NAVIGATION IN THE SAME PAGE OR IN THE SAME WEBSITE (go to a spacific element not just a page)
+		2- {target} can be '_self' '_blank' '_top' '_parent' ....   this spacifies if the link will open in a new window or tab or in the same tab that we are in.
+	-->
+<br>
+	<video src="" autoplay loop controls>your browser doesnt support video</video>
+	<audio src="" autoplay loop controls buffered="" volume="">your browser doesnt support audio</audio>
+	<!--
+		1- we can add (#t=5,25) at the end of the {src} this will tell the browser to play the video or audio only from second 5 to second 25. (#t=,30)=start from 0 end at 30. (#t=40) start from 40 to the end.
+	-->
+<br>
+	<table>
+		<td><tr></tr><tr></tr></td>
+		<td><tr></tr><tr></tr></td>
+		<td><tr></tr><tr></tr></td>
+
+		<caption> information about "what is this table about??? this is the small text that appears right under the table" </caption>
+	</table>
+<br>
+<!--    SEMANTIC  BLOCK  TAGS    -->
+	<header></header>
+	<footer></footer>
+	<nav></nav>
+	<figure></figure>
+	<hr><!--thin line across the page-->
+	<address></address>
+	<blockquote><!--some quoted speach--><cite><!--the person who said it (found by search engines)--></cite></blockquote>
+	<details><summary></summary></details>
+<br>
+<!--    SEMANTIC  INLINE  TAGS    -->
+	<span></span>
+	<cite>this is found by search engines</cite>
+	<abbr>show the full word or name when you hover over</abbr>
+	<time></time>
+	<code></code>
+	<sub></sub>
+	<sup></sup>
+<br>
+<!--       MORE     TAGS     -->
+	<button></button>
+	<meter min="" max="" value=""></meter>
+	<progress value="" max=""></progress>
+	<!-- Differanc between "meter" and "progress" is that the second is supposed to reach the end but the first could be used to show a voting result so it might increase or decrease with time we dont care, but progress should increase (logicaly) -->
+	<iframe src=""></iframe>
+	<br>
+	<bdo dir="rtl">شسبهحلاتجيبلاىجثخبقلاةقجحخلا </bdo>
+	<br>
+	<map></map>
+
+
+	<!--
+		useful tools:
+		1- WAVE accessibility checher (https://wave.webaim.org/)
+		2- FUNKIFY disability simulator (https://www.funkify.org/?v=174fe2539889)
+		3- CPANEL website control panal (https://www.cpanel.net/)
+		4 GitHub for free hosting (https://github.com/)
+		5- WinSCP for tranfering files to server (https://winscp.net/eng/index.php)
+	-->
+
+
+</body>
+</html>

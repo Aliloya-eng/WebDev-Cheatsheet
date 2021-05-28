@@ -1,0 +1,191 @@
+
+/* selector { property : value ; } */
+/* selector { property : value !important ; } */
+/* write <link rel="stylesheet" href="DIRECTORY">      in html head */
+
+
+
+/* COLORS
+1- by color name yellow
+2- by Hexadecimal #FFFF00 // the most commen way
+3- rgb (1,27,0)
+4- rgba (134,0.8,1,5)  // {a} stands for alpha TRANSPARANCY
+*/
+
+/* you can give alternatives to the properties' values by mentioning the alternatives in the desired order seperated by commas after the main value */
+
+
+
+/* configuring your own special text font
+@font-face{
+	font-family : myFont;
+	src: url("DIRECTORY");
+}
+*/
+
+
+
+/* DISPLAY
+1- inline:			the element takes just enough width and hight
+					+++ YOU CANT CHANGE THE HIGHT OR WIDTH
+2- block:			forces a line break
+					+++ elements take enough hight and all the horizantal width (one element takes the whole line)
+					+++ you can change the hight and width
+3- inline-block:	inline that accepts hight and width
+4- none: 			No display
+*/
+
+
+/* New (dont work on all browsers)
+display : table + table-cell (as if elements are in a table row) 	/	grid 	/	flexbox 
+*/
+
+
+/* float(left or right) != clear(left or right or both) */
+
+
+
+/* OVERFLOW (use this if the element is not big enough to contain all the text) 
+1- visible:	the text will be visible even if it went out side the parent
+2- hidden:	the text wont be visible when it gets outside the parent
+3- scroll:	gives horizantal and vertical scrollbars to the parent (ALWAYS VISIBLE)
+4- auto:	gives horizantal and vertical scrollbars to the parent (WHEN NEEDED)
+*/
+
+
+
+/* VISIBILITY
+1- visible:		default
+2- hidden:		reserve the space for the element but make the element invisible for now
+3- collapse:	(used with table elements)
+
+
+
+/////*	 Box Model
+
+1-HIGHT and WIDTH : don't work with inline elements
+2-BORDERs
+border-width : 3px 10px 			;	==  3 pixels for TOP and BOTTOM border   ++   10 pixels for RIGHT and LEFT borders
+border-width : 3px 10px 20px 		;	==	3 pixels for TOP + 10 pixels for RIGHT and LEFT borders + 20 pixels for BOTTOM
+border-width : 3px 10px 20px 5px	;	==  TOP + RIGHT + BOTTOM + LEFT
+3- MARGINs	(works like borders) +++ to center an element other than text- we use {margin: 0 auto;} but the elements should be:
+			not display:block + not display:float + not position:fixed + not position:absolute + width is set to a specific value
+4- PADDINGs	(works like borders)
+<<<<<<<<<<<<<   all the MARGIN+BORDER+PADDING are parts of the whole WIDTH and HIGHT  >>>>>>>>>>>>>>>>>
+5- SIZEs 	1- Absolute (px,mm,pt...)		2- Fluid (%,vw,vh,em,rem....) in this case borders will be outside the size.
+*/
+
+
+
+/* LINKS
+a:hover{}	a:link{}	a:visited{}		a:focus{}		a:active{}
+>> hover must come after link		++		visited and active must come after hover
+*/
+
+
+
+/* LISTS
+list-style-type:;		list-style-image:;		list-style-position:;		list-style:;
+*/
+
+
+
+/* SELECTORS
+1- DOM:		nav a{}		nav>a{}		h1+ol{}
+2- ID :		#id{}
+3- CLASS:	.className{}		p.calssName{}		img.className{}
+4- we can use combanation of all the above	-to narrow the scope
+5- selector1, selector2,selector3			-to expand the scope
+6- Universal selector:		* == allllll the elements    -nice for debugging
+7- Attribute Selectors:		a[href="..."]		table[cellpadding=1]		img[alt=""]
+	+++ Using Operators
+						(^)	a[href^="https://www.svu"] all links that << START with "https://www.svu" >>
+						($) img[src$=".png"] all PNG images << ENDS with ".png" >>
+						(*) a[href*="svu"] all links that << CONTAINS "svu" anywhere >>
+8- Pseudo-Classes:			a:hover{}		input:enabeled{}	a:active{};
+9- Pseudo-Elements:			
+*/
+/*	Advanced selectors and other advance HTML+CSS:	"https://learn.shayhowe.com/advanced-html-css/"		*/
+
+
+
+
+/* BROWSERS
+some styles that dont work well with all browsres:
+- colum-count:4;		- colum-gap:10px;		- border-radius:25px;		- background:linear-gradient(red 5%,blue 25%);
+* Prefixes for browsers:
+Android+Chrome+IOS+Safari: -webkit-			Firefox: -moz-			InternetExplorer: -ms- 			Opera:-o-
+*/
+/*	What will work with difirent browsers?:	"https://caniuse.com/#home"		*/
+
+
+/* Make your page
+1- Preceivable:		(alt) for images ++ captions and transcripts for video ++ semantic tags ++ good color contrast
+2- Operable:		all functionality should be available from KEYBOARD not everyone uses a MOUSE
+3- Understandable:	use less words ++ use GOOD design = easy on the eye ++ make youe page operate (navigation) in a predictable way
+4- Rebust:			make sure the page works in all platforms
+*/
+
+
+
+/* TRANSITIONS ( property - duration - timing - delay )
+{
+transition-property:color,width,border-radius;
+transition-duration:0.5s;	
+transition-timmimg-function:linear;
+transition-delay:0.5s;
+}
+OR (SAME AS)
+{
+	transition: background 0.2s linear , border-radius 1s ease-in 1s;
+}
+*/
+
+
+
+/* TRANSFORMS (2D) (3D)
+1- Translate: ( x , y ) ; 		//	x=horizantal, y= vertical
+2- Rotatez: ( Xdeg );			//	X=angle
+3- Scale: ( w , h );			//	w=width,h=hight
+4- Skew: ( x , y );				//	x=angle around x, y=angle around y
+5- Matrix ();					// combination of all the above
+*/
+
+
+/* tabindex="NUMBER" 			// atribute used inside the oppening tag to set the order of elements when using the Tab button */
+/* opacity: 0<= NUMBER <=1 ;	// property used to change the transparancy
+
+
+
+
+/* POSITION
+1- Static:		(the default value)
+2- Relative:	relativly to the default position = static with offsets
+				// doesn't effect other elements
+3- Absolute:	relativly to the nearest ancestor (root)
+				// other elements behave as if this element doesn't exist (elements may go in top of each other)
+4- Fixed:		relatively to the browser window (scrolls with you)
+*/
+
+/* z-index 		// used for chosing which element will appear on top */
+
+
+/*////////////////*/
+
+/* EXTRAS & EXAMPLS
+
+th:nth-child(1){....}
+th:nth-child(odd OR even){....}
+td:last-child{....}
+table{border-radius: 5px 0 25px 0;}				topLeft topRight bottomRight bottomLeft
+box-sizing:border-box;
+
+HTML TAGS:	<aside>	<nav>	<caption>
+
+//////////////////////
+
+
+EXP-1-
+https://codepen.io/ColleenEMc/pen/pjdpVW
+EXP-2-
+https://codepen.io/ColleenEMc/pen/QjOaxv

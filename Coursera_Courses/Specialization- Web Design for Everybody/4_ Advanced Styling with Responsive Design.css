@@ -1,0 +1,137 @@
+/*/////////////////////////////// 					Advanced Styling with Responsive Design 			/////////////////////////////*/
+
+/**********
+						always do your design for the mobile view first
+																			***********/
+CONCEPTS
+
+/* "RESPONSIVE" OPTIONS
+1- responsive web design (RWD)			2- adaptive design (dynamic serving)			3- separate mobile site (.m)
+*/
+
+/* WIREFRAMES (graphic design)
+exp to understand: wireframeshowcase.com
+*/
+
+/* BREAKPOINTS
+the sizes(of the diffirent devices or of the content) or positions that define "trigger" a change in the site layout or content
+*/
+
+/* MOBILE FIRST
+always 	design 	for 	small 	screen 	mobiles 	first 	then 	use 	(min-width:000px) 	for 	tabs 	and 	laptops
+*/
+
+/* FRAMEWORKS:  		Bootstrap	    , 	    Semantic UI  */
+
+/* Templates:
+1- getbootstrap.com/getting-started/#examples
+2- bootstrapzero.com
+3- startbootstrap.com
+*/
+
+MORE PRACTICAL
+
+/* CHECKING THE "RESPONSIVITY" OF A SITE
+1- ami.responsivedesign.is
+2- resise the browser window
+3- browser tools: in chrome there is a tool in the developer mode (inspect element) to toggle between platforms
+*/
+
+
+
+/* FLUID MEASUREMENTS
+the point is to avoid HORIZANTEL scrolling (vertical scrolling is normal)
+** Absolute Measurements: 	px 		mm,cm,in 		pt 		pc
+** Relative Measuremenst: 	% 		em (1em=100%) 		rem 	vw (viewPortWidth) 		vh (viewPortHeight)
+*/
+
+
+/* MEDIA QUERIES
+allows us to ajust the style of our webpages depending upon the properties of the media we are looking at
+1- media type: screen||print||all... 			2-"trigger" size of the media: width,height,orientation,resolution
+
+** Implementing Media Queries:
+1- inside the CSS : @IMPORT URL(..cssStyleSheet.css..) ..screen.. AND (min-width:600px);
+2- inside the CSS : @MEDIA screen AND (min-width:500px) { .... all our stylings .... };
+3- inside the HTML: < link rel="stylesheet" MEDIA="screen AND (min-width:500px) AND (orientation:portrait)" />
+
+** STEPS TO USE MEDIA QUERIES
+1- use this meta tag: < meta name="viewport" content="width=device-width, initial-scale=1" >   //  this tells the mobile browser how to behave
+2- use fluid layout as much as you can
+3- use media queries ( carefull think from small screen to bigger then bigger )
+*/
+
+
+
+/* BOOTSTRAP 3
+
+** to use Bootstrap
+1- download a copy of Bootstrap from :  getbootstrap.com
+or 2- use CDN (content delivery network) get the link from : getbootstrap.com/getting-started
+(be careful to put the link of CSS at the begening of your file and also put the js link at the bottom of your file EVEN IF YOU DONT WANT TO USE JS)
+or if you are using CodePin 3- go to settings->css->Quiq add
+*/ when you use any of the above, BOOTSTRAP will change all default values of all elements even if you dont want to (because bootstrap sets default values /*
+
+
+
+
+** Grid System
+bootstrap can see every element as somthing you can break down to 12 columns (and you can deal with these columns while styling) SO:  3col=25%  	6col=50% ...
+* every grid consists of: one CONTAINER class + one ROW class + oen or more COLUMN classes
+- class="row" 					// this helps you control what elements will be in the same row
+- COL classes in HTML: <element-name class="col-xx-yy"> 	// xx= XS or SM or MD or LG (size of screen)   and yy=0...12 (size of the element (in columns))
+- class="col-xx-push-yy" 		// xx = XS, SM, MD, LG   yy= 0...12 (move this element yy columns to the right)
+- class="col-xx-pull-yy" 		// xx = XS, SM, MD, LG   yy= 0...12 (move this element yy columns to the left)
+- class="hidden-xx" 			// this element will be hidden ONLY on the xx screen size
+- class="visible-xx" 			// this element will be visible ONLY on the xx screen size
+- class="sr-only" 				// this element will be visible ONLY to screen-readers
+
+
+
+
+** nav classes for navigation bars (use them for <nav> tag or <ul> tag that you want to put the navigation links in)
+-class="nav"
+-class="nav-tabs" 				// the links are like tabs now
+-class="nav-pills" 				// you can use the "active" class for one of the links
+-class="nav-stacked" 			// links are blocks (take the whole width and in top of each others)
+-class="nav-justified" 			// spread the links to take one row (the whole width) and the width of all links will be the same
+									+++ when the screen is small this will automatically turn to "nav-stacked"
+
+** Drop downs classes
+to use this you need to link to js bootstrap AND put a link to JQuery at the bottom of you HTML
+exp : 	<li role="presintation" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expand="false"> DropDown <span class="caret"> </span> </a> <ul class="dropdown-menu"> <li></li><li></li><li></li> </ul> </li>
+
+** navbar class
+class="navbar navbar-default navbar-static-top" 					class="navbar-fixed-top"  							class="navbar-fixed-bottom"
+
+
+
+
+** Responsive images
+1- use fluid measurements 		.....		// it is advised to put max-width and min-width in some cases
+2- bootstrap
+- class="img-responsive" 		// = display:block + max-width:100% + height=auto
+- class="img-rounded" 			// = border-raduis
+- class="img-circle" 			// turns the image into a circle
+- class="img-thumbnail" 		// little border + little padding      (looks good with galaries)
+
+
+
+
+** Styling Tables with bootstrap
+-class="table" 				// = width:100% + adds little padding and horizantle dividers
+							++++ (the foundation class you need to always have that class when styling a table with bootstrap)
+-class="table-striped" 		// adds some color to odd rows, even rows stay transparant
+-class="table-bordered" 	// adds borders to the table and to the cells
+-class="table-hover" 		// adds hover state styling to the rows
+
+* for responsive tables
+most of the time it is hard to make a table fit in the width of small screens so most of the time we use scrollable tables to do this we use
+<class="table-responsive"> so that when the screen is small then the table will have the scroll bar not the whole window.... BUT ........
+///////////////////////////////   WE SHOULD ADD THIS CLASS NOT TO THE TABLE TAG, WE SHOULD ADD IT TO THE ELEMENT THAT CONTAINS THE TABLE
+
+** Styling parts of Tables with bootstrap (row,header,cell)
+class="active"(light gray) 		class="success"(light green) 		class="info" 		class="warning"(light yellow) 		class="danger"(light red)
+*/
+try to use bootstrap classes then ovverwrite them with classes you make to change some details
+
